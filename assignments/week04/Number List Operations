@@ -1,0 +1,45 @@
+def number_operations():
+    numbers = []
+
+    # Get 10 numbers from the user
+    print("Enter 10 numbers:")
+    for i in range(10):
+        while True:
+            try:
+                num = float(input(f"Enter number {i + 1}: "))
+                numbers.append(num)
+                break
+            except ValueError:
+                print("Invalid input! Please enter a numeric value.")
+
+    # Display original list
+    print("\n" + "=" * 40)
+    print(f"Original numbers: {numbers}")
+
+    # Create filtered lists using List Comprehensions
+    even_numbers = [num for num in numbers if num % 2 == 0]
+    odd_numbers = [num for num in numbers if num % 2 != 0]
+
+    # Statistics calculations
+    total_sum = sum(numbers)
+    average = total_sum / len(numbers)
+    min_val = min(numbers)
+    max_val = max(numbers)
+
+    # Numbers greater than average
+    above_average = [num for num in numbers if num > average]
+
+    # Display results
+    print(f"Even numbers: {even_numbers}")
+    print(f"Odd numbers: {odd_numbers}")
+    print(f"Numbers greater than average: {above_average}")
+
+    print("\n--- Statistics ---")
+    print(f"Sum: {total_sum}")
+    print(f"Average: {average:.2f}")
+    print(f"Min: {min_val}")
+    print(f"Max: {max_val}")
+
+
+if __name__ == "__main__":
+    number_operations()
