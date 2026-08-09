@@ -1,0 +1,22 @@
+def calculate_circle(radius):
+    pi = 3.14159
+    
+    # คำนวณพื้นที่และเส้นรอบวง พร้อมปัดทศนิยม 2 ตำแหน่ง
+    area = round(pi * (radius ** 2), 2)
+    circumference = round(2 * pi * radius, 2)
+    
+    # คืนค่าเป็น Dictionary ตามโจทย์ระบุ
+    return {
+        "area": area,
+        "circumference": circumference
+    }
+
+    def create_user_profile(username, age=18, premium=False):
+    user_type = "Premium User" if premium else "Standard User"
+    return f"{username} (age: {age}) - {user_type}"
+
+
+# --- ส่วนทดลองใช้งานตามโจทย์ในรูป (3 ตัวอย่าง) ---
+print(create_user_profile("kamonphan", 30))
+print(create_user_profile("Baifern"))
+print(create_user_profile("Ploy", 23, True))

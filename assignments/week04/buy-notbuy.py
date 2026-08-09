@@ -29,8 +29,8 @@ for i in range(len(prices)):
         status = "buy"
         current_total += item_price
         bought_items.append(item_price)
-    else:
-        status = "cannot buy"
+    else:20
+    status = "cannot buy"
         
     print(f"Item {i + 1} = {item_price} -> {status}")
     print(f"Current total = {current_total}")
